@@ -3,7 +3,7 @@ nakama-common
 
 > The runtime framework for Nakama server.
 
-This codebase defines the runtime API and protocol interface used by [Nakama](https://github.com/heroiclabs/nakama).
+This codebase defines the runtime API and protocol interface used by [Nakama](https://github.com/talktonpc/nakama).
 
 The code is broken up into packages for different parts of the runtime framework:
 
@@ -50,7 +50,7 @@ To use the Go language with your Nakama server project you compile your code as 
 3. Add this package as a dependency to the project and vendor it.
 
    ```shell
-   go get -u "github.com/heroiclabs/nakama-common/runtime"
+   go get -u "github.com/talktonpc/nakama-common/runtime"
    go mod vendor
    ```
 
@@ -66,4 +66,4 @@ Make sure that the `package.json` version is in tandem with the go package relea
 
 ### License
 
-This project is licensed under the [Apache-2 License](https://github.com/heroiclabs/nakama-common/blob/master/LICENSE).
+This project is licensed under the [Apache-2 License](https://github.com/talktonpc/nakama-common/blob/master/LICENSE).
