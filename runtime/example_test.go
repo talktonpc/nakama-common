@@ -21,8 +21,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/heroiclabs/nakama-common/api"
-	"github.com/heroiclabs/nakama-common/rtapi"
+	"github.com/talktonpc/nakama-common/api"
+	"github.com/talktonpc/nakama-common/rtapi"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
@@ -46,7 +46,7 @@ func ExampleInitializer_registerRpc() {
 // This example shows how to register a hook function that is invoked
 // when messages with matching names are received from the real-time (rt) socket.
 // For list of message names see:
-// https://heroiclabs.com/docs/runtime-code-basics/#message-names
+// https://talktonpc.com/docs/runtime-code-basics/#message-names
 func ExampleInitializer_registerBeforeRt() {
 	// this is received from the InitModule function invocation
 	var initializer Initializer
@@ -72,7 +72,7 @@ func ExampleInitializer_registerBeforeRt() {
 // In this example, we send a notification to anyone when they have a new follower following their status updates.
 //
 // For list of message names see:
-// https://heroiclabs.com/docs/runtime-code-basics/#message-names
+// https://talktonpc.com/docs/runtime-code-basics/#message-names
 func ExampleInitializer_registerAfterRt() {
 	// this is received from the InitModule function invocation
 	var initializer Initializer
@@ -116,7 +116,7 @@ func ExampleInitializer_registerAfterRt() {
 // This example shows how to disable various server features by returning nil in case of an actual result.
 // Disabled server resources return 404 to the clients.
 // For list of message names see:
-// https://heroiclabs.com/docs/runtime-code-basics/#message-names
+// https://talktonpc.com/docs/runtime-code-basics/#message-names
 func ExampleInitializer_disableFeatures() {
 	// this is received from the InitModule function invocation
 	var initializer Initializer
@@ -144,7 +144,7 @@ func ExampleInitializer_disableFeatures() {
 // In this example, we are ensuring that the username passed from the client does not contain certain words.
 //
 // For list of message names see:
-// https://heroiclabs.com/docs/runtime-code-basics/#message-names
+// https://talktonpc.com/docs/runtime-code-basics/#message-names
 func ExampleInitializer_registerBeforeAuthenticateCustom() {
 	// this is received from the InitModule function invocation
 	var initializer Initializer
@@ -173,7 +173,7 @@ func ExampleInitializer_registerBeforeAuthenticateCustom() {
 // This example shows how to join a newly created user to a specific tournament.
 //
 // For list of message names see:
-// https://heroiclabs.com/docs/runtime-code-basics/#message-names
+// https://talktonpc.com/docs/runtime-code-basics/#message-names
 func ExampleInitializer_registerAfterAuthenticateCustom() {
 	// this is received from the InitModule function invocation
 	var initializer Initializer

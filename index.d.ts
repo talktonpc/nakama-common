@@ -3558,7 +3558,7 @@ declare namespace nkruntime {
          * @param label - Filter by a label. If null or no value is provided, all labels are matched.
          * @param minSize - Filter by min number of players in a match. If NULL or no value is provided, there is no lower player bound.
          * @param maxSize - Filter by max number of players in a match. If NULL or no value is provided, there is no upper player bound.
-         * @param query - Query by match properties (https://heroiclabs.com/docs/gameplay-matchmaker/#query). If no value is provided, all properties match.
+         * @param query - Query by match properties (https://talktonpc.com/docs/gameplay-matchmaker/#query). If no value is provided, all properties match.
          * @returns list of running game matches that match the specified filters.
          * @throws {TypeError, GoError}
          */

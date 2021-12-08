@@ -4,7 +4,7 @@
   "description": "The runtime Type definitions for the Nakama game server.",
   "author": "Heroic Labs.",
   "license": "Apache-2.0",
-  "homepage": "https://heroiclabs.com",
+  "homepage": "https://talktonpc.com",
   "keywords": [
       "nakama",
       "typescript",
@@ -13,6 +13,6 @@
   "typings": "./index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroiclabs/nakama-common.git"
+    "url": "https://github.com/talktonpc/nakama-common.git"
   }
 }

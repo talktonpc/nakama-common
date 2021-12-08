@@ -31,7 +31,7 @@ Here's the smallest example of a Go module written with the server runtime.
 		"database/sql"
 		"log"
 
-		"github.com/heroiclabs/nakama-common/runtime"
+		"github.com/talktonpc/nakama-common/runtime"
 	)
 
 	func InitModule(ctx context.Context, logger Logger, db *sql.DB, nk runtime.NakamaModule, initializer runtime.Initializer) error {
@@ -55,15 +55,15 @@ Here's the smallest example of a Go module written with the server runtime.
 		return string(response), nil
 	}
 
-On server start, Nakama scans the module directory folder (https://heroiclabs.com/docs/runtime-code-basics/#load-modules).
+On server start, Nakama scans the module directory folder (https://talktonpc.com/docs/runtime-code-basics/#load-modules).
 If it finds a shared object file (*.so), it attempts to open the file as a plugin and initialize it by running the InitModule function.
 This function is guaranteed to ever be invoked once during the uptime of the server.
 
 To setup your own project to build modules for the game server you can follow these steps.
 
 1. Build Nakama from source:
-	go get -d github.com/heroiclabs/nakama-common
-	cd $GOPATH/src/github.com/heroiclabs/nakama-common
+	go get -d github.com/talktonpc/nakama-common
+	cd $GOPATH/src/github.com/talktonpc/nakama-common
 	env CGO_ENABLED=1 go build
 
 2. Setup a folder for your own server code:
@@ -76,12 +76,12 @@ To setup your own project to build modules for the game server you can follow th
 NOTE: It is not possible to build plugins on Windows with the native compiler toolchain but they can be cross-compiled and run with Docker.
 
 4. Start Nakama with your module:
-	$GOPATH/src/github.com/heroiclabs/nakama-common/nakama --runtime.path $GOPATH/src/plugin_project/modules
+	$GOPATH/src/github.com/talktonpc/nakama-common/nakama --runtime.path $GOPATH/src/plugin_project/modules
 
 TIP: You don't have to install Nakama from source but you still need to have the `api`, `rtapi` and `runtime` packages from Nakama on your `GOPATH`. Heroic Labs also offers a docker plugin-builder image that streamlines the plugin workflow.
 
 For more information about the Go runtime have a look at the docs:
-https://heroiclabs.com/docs/runtime-code-basics
+https://talktonpc.com/docs/runtime-code-basics
 */
 package runtime
 
@@ -93,8 +93,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/heroiclabs/nakama-common/api"
-	"github.com/heroiclabs/nakama-common/rtapi"
+	"github.com/talktonpc/nakama-common/api"
+	"github.com/talktonpc/nakama-common/rtapi"
 )
 
 const (
@@ -311,7 +311,7 @@ type Initializer interface {
 		RegisterBeforeRt registers a function for a message. The registered function will be called after the message has been processed in the pipeline.
 		The custom code will be executed asynchronously after the response message has been sent to a client
 
-		Message names can be found here: https://heroiclabs.com/docs/runtime-code-basics/#message-names
+		Message names can be found here: https://talktonpc.com/docs/runtime-code-basics/#message-names
 	*/
 	RegisterBeforeRt(id string, fn func(ctx context.Context, logger Logger, db *sql.DB, nk NakamaModule, envelope *rtapi.Envelope) (*rtapi.Envelope, error)) error
 
@@ -321,7 +321,7 @@ type Initializer interface {
 
 		You can return `nil` instead of the `rtapi.Envelope` and this will disable disable that particular server functionality.
 
-		Message names can be found here: https://heroiclabs.com/docs/runtime-code-basics/#message-names
+		Message names can be found here: https://talktonpc.com/docs/runtime-code-basics/#message-names
 	*/
 	RegisterAfterRt(id string, fn func(ctx context.Context, logger Logger, db *sql.DB, nk NakamaModule, envelope *rtapi.Envelope) error) error
 
