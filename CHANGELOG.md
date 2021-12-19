@@ -4,12 +4,15 @@ All notable changes to this project are documented below.
 The format is based on [keep a changelog](http://keepachangelog.com) and this project uses [semantic versioning](http://semver.org).
 
 ## [Unreleased]
+
+
+## [1.21.0] - 2021-12-16
 ### Added
-- Add ctx field to access http request headers in the runtimes.
-- New JS runtime stringToBinary and binaryToString functions.
+- Add ctx field to access http request headers in the Lua and JavaScript runtimes.
+- New JavaScript runtime stringToBinary and binaryToString functions.
 
 ### Changed
-- JS runtime match data changed to Uint8Array.
+- JavaScript runtime match data changed to use Uint8Array type.
 
 ## [1.20.0] - 2021-10-29
 ### Added
