@@ -1,6 +1,6 @@
 {
   "name": "nakama-runtime",
-  "version": "v3.9.1-meta",
+  "version": "v1.27.3",
   "description": "The runtime Type definitions for the Nakama game server.",
   "author": "Heroic Labs.",
   "license": "Apache-2.0",
