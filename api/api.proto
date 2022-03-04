@@ -1121,12 +1121,16 @@ message Users {
 message ValidatePurchaseAppleRequest {
   // Base64 encoded Apple receipt data payload.
   string receipt = 1;
+  // Persist the purchase
+  google.protobuf.BoolValue persist = 2;
 }
 
 // Google IAP Purchase validation request
 message ValidatePurchaseGoogleRequest {
   // JSON encoded Google purchase payload.
   string purchase = 1;
+  // Persist the purchase
+  google.protobuf.BoolValue persist = 2;
 }
 
 // Huawei IAP Purchase validation request
@@ -1135,6 +1139,8 @@ message ValidatePurchaseHuaweiRequest {
   string purchase = 1;
   // InAppPurchaseData signature.
   string signature = 2;
+  // Persist the purchase
+  google.protobuf.BoolValue persist = 3;
 }
 
 // Validated Purchase stored by Nakama.

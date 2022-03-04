@@ -4,7 +4,12 @@ All notable changes to this project are documented below.
 The format is based on [keep a changelog](http://keepachangelog.com) and this project uses [semantic versioning](http://semver.org).
 
 ## [Unreleased]
+### Added
+- Add GroupUsersBan function to the runtimes.
+- Add LeaderboardRecordsHaystack function to the runtimes.
 
+### Changed
+- Add senderID param to channelIdBuild.
 
 ## [1.21.0] - 2021-12-16
 ### Added
@@ -13,6 +18,7 @@ The format is based on [keep a changelog](http://keepachangelog.com) and this pr
 
 ### Changed
 - JavaScript runtime match data changed to use Uint8Array type.
+- Added IAP validation `persist` parameter to make persistence optional. 
 
 ## [1.20.0] - 2021-10-29
 ### Added
